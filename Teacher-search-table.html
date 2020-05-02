@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-----our style---->
+    <link rel="stylesheet" href="index2style.css">
+    <link rel="stylesheet" href="swiper.min.css">
+     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>TutorWorld</title>
+  </head>
+  <body>
+    <!-- Naviagation -->
+<section id="nav-bar">
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+           <a href="index2.html" class="navbar-brand"><img src="img/logo.png" style="height: 40px; padding-left: 30px;"></a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                 <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                   <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                   <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                   <a href="#" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item">
+                   <a href="#" class="nav-link">Complain Box</a>
+                </li>
+                <li class="nav-item">
+                   <a href="#" class="nav-link">Contact</a>
+                </li>
+                </ul>
+            </div>
+    </div> 
+  </nav>
+</section>
+
+  <div class="shade">
+
+    <div class="blackboard">
+        <div class="form">
+            <p>
+                <label style="padding: 5px">Location: </label>
+               <select style="border:  1px solid white;width: 260px;border-radius: 20px;cursor:pointer;">
+                <option>Select Location</option>
+                 <option>Chakdha</option>
+                 <option>Simurali</option>
+                 <option>Palpara</option>
+                 <option>Kalyani</option>
+               </select>
+            </p>
+            <p>
+                <label>Class: </label>
+             <select id="input" onchange="random_function()" style="border:  1px solid white;width: 260px;border-radius: 20px;cursor:pointer;">
+            <option>select Class</option>
+            <option>LKG,UKG</option>
+            <option>Class I</option>
+            <option>Class II</option>
+            <option>Class III</option>
+            <option>Class IV</option>
+            <option>Class V</option>
+            <option>Class VI</option>
+            <option>Class VII</option>
+            <option>Class VIII</option>
+            <option>Class IX</option>
+            <option>Class X</option>
+            <option>Class XI SCIENCE</option>
+            <option>Class XI HUMANITIES</option>
+            <option>Class XI COMMERCE</option>
+            <option>Class XII SCIENCE</option>
+            <option>Class XII HUMANITIES</option>
+            <option>Class XII COMMERCE</option>
+
+            
+        </select>
+                <!---<input type="text" placeholder="Board"  style="border:  1px solid white;width: 260px;border-radius: 20px" />--->
+            </p>
+            <p>
+                <label>Subject: </label>
+                <select id="output" onchange="random_function1()" style="border:  1px solid white;width: 260px;border-radius: 20px;cursor: pointer;">
+                  <option>Select Subject</option>
+                
+            </p>
+           
+            <p class="wipeout" style="margin-top: 10px;">
+                <input type="submit" value="Search" style="background: white;width: 200px;color: black;border-radius: 30px;margin-top: 20px;cursor: pointer;" />
+            </p>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+  body {
+    height: 100%;
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg) center center fixed;-->
+    background-size: cover;*/
+    background: url('img/searchimg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.shade {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient( 150deg, rgba(0, 0, 0, 0.65), transparent);
+}
+
+.blackboard {
+    position: relative;
+    width: 350px;
+    margin: 7% auto;
+    margin-top: 150px;
+    border: tan solid 12px;
+    border-top: #bda27e solid 12px;
+    border-left: #b19876 solid 12px;
+    border-bottom: #c9ad86 solid 12px;
+    box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient( circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient( 215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient( circle at right, #111, rgba(51, 51, 51, 1));
+    background-color: #333;
+}
+
+.blackboard:before {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 175deg, transparent, transparent 40px, rgba(120, 120, 120, 0.1) 100px, rgba(120, 120, 120, 0.1) 110px, transparent 220px, transparent), linear-gradient( 200deg, transparent 80%, rgba(50, 50, 50, 0.3)), radial-gradient( ellipse at right bottom, transparent, transparent 200px, rgba(80, 80, 80, 0.1) 260px, rgba(80, 80, 80, 0.1) 320px, transparent 400px, transparent);
+    border: #2c2c2c solid 2px;
+    content: "Search Teacher";
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.2em;
+    color: rgba(238, 238, 238, 0.7);
+    text-align: center;
+    padding-top: 20px;
+}
+
+.form {
+    padding: 70px 20px 20px;
+}
+
+p {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+label {
+    vertical-align: middle;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.6em;
+    color: rgba(238, 238, 238, 0.7);
+}
+
+p:nth-of-type(5) > label {
+    vertical-align: top;
+}
+
+input,
+textarea {
+    vertical-align: middle;
+    padding-left: 10px;
+    background: none;
+    border: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.6em;
+    color: rgba(238, 238, 238, 0.8);
+    line-height: .6em;
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+    font-size: 1.4em;
+    line-height: 1em;
+    resize: none;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    color: rgba(238, 238, 238, 0.7);
+    line-height: 1em;
+    padding: 0;
+}
+
+input[type="submit"]:focus {
+    background: rgba(238, 238, 238, 0.2);
+    color: rgba(238, 238, 238, 0.2);
+}
+
+::-moz-selection {
+    background: rgba(238, 238, 238, 0.2);
+    color: rgba(238, 238, 238, 0.2);
+    text-shadow: none;
+}
+
+::selection {
+    background: rgba(238, 238, 238, 0.4);
+    color: rgba(238, 238, 238, 0.3);
+    text-shadow: none;
+}
+</style>
+ <script>
+            function random_function()
+            {
+                var a=document.getElementById("input").value;
+                if(a==="LKG,UKG")
+                {
+                    var arr=["All Subject","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+
+                else if(a==="Class I")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing","All Subject"];
+                }
+
+                else if(a==="Class II")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+                else if(a==="Class II")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+                else if(a==="Class III")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+                else if(a==="Class IV")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+                else if(a==="Class V")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+                else if(a==="Class VI")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+                else if(a==="Class VII")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+                else if(a==="Class VIII")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+                else if(a==="Class IX")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+                else if(a==="Class X")
+                {
+                    var arr=["English","Maths","Bengali","Social Science","EVS","Drawing"];
+                }
+
+             
+                var string="";
+             
+                for(i=0;i<arr.length;i++)
+                {
+                    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+                }
+                document.getElementById("output").innerHTML=string;
+            }
+        </script>
+           <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
